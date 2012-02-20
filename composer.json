@@ -15,14 +15,14 @@
 	],
 	"require": {
 		"php": ">=5.3",
-        "symfony/class-loader": "2.1.*",
-        "symfony/http-foundation": "2.1.*",
+		"symfony/class-loader": "2.1.*",
+		"symfony/http-foundation": "2.1.*",
 		"natxet/OperaCore": "*",
 		"natxet/CssMin": "*",
 		"natxet/JShrink": "*",
 		"pimple/pimple": "*",
-		"twig/twig": "1.7.*",
+		"twig/twig": "*",
 		"twig/extensions": "*",
 		"swiftmailer/swiftmailer": "4.1.*"
-    }
+	}
 }
