@@ -15,7 +15,6 @@
 	],
 	"require": {
 		"php": ">=5.3",
-		"symfony/class-loader": "*",
 		"symfony/http-foundation": "*",
 		"natxet/OperaCore": "*",
 		"natxet/CssMin": "*",
