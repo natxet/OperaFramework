@@ -1,8 +1,6 @@
 <?php
 
-error_reporting( E_ALL );
+require( __DIR__ . '/../vendor/natxet/OperaCore/src/OperaCore/Bootstrap.php' );
 
-require( __DIR__ . '/../vendor/natxet/OperaCore/Bootstrap.php' );
-
-$bootstrap  = new \natxet\OperaCore\Bootstrap();
-$dispatcher = new \natxet\OperaCore\Dispatcher( $bootstrap->getContainer() );
+$bootstrap  = new OperaCore\Bootstrap();
+$dispatcher = new OperaCore\Dispatcher( $bootstrap->getContainer() );
