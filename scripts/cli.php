@@ -14,9 +14,9 @@ if ( !isCli() ) trigger_error( 'This file must be executed by php-cli' );
 
 date_default_timezone_set( 'Europe/Madrid' );
 
-require( __DIR__ . '/../vendor/natxet/OperaCore/Bootstrap.php' );
+require( __DIR__ . '/../vendor/natxet/OperaCore/src/OperaCore/Bootstrap.php' );
 
-$bootstrap = new \natxet\OperaCore\BootstrapCli();
+$bootstrap = new \OperaCore\BootstrapCli();
 
 list( , $class_name, $env, $app ) = $argv;
 
