@@ -20,7 +20,6 @@ define( 'VENDOR_PATH'   ,  __DIR__ . '/../vendor/'  );
 define( 'OPERACORE_PATH', VENDOR_PATH . 'natxet/OperaCore/src/OperaCore/'  );
 
 require( OPERACORE_PATH . 'Bootstrap.php' );
-
 $bootstrap = new \OperaCore\Bootstrap();
 
 list( , $class_name, $env, $app ) = $argv;
