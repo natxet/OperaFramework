@@ -14,11 +14,19 @@ if ( !isCli() ) trigger_error( 'This file must be executed by php-cli' );
 
 date_default_timezone_set( 'Europe/Madrid' );
 
-require( __DIR__ . '/../vendor/natxet/OperaCore/Bootstrap.php' );
 
-$bootstrap = new \natxet\OperaCore\BootstrapCli();
+define( 'APPS_PATH'     ,  __DIR__ . '/../app/'  );
+define( 'VENDOR_PATH'   ,  __DIR__ . '/../vendor/'  );
+define( 'OPERACORE_PATH', VENDOR_PATH . 'natxet/OperaCore/src/OperaCore/'  );
+
+require( OPERACORE_PATH . 'Bootstrap.php' );
+
+$bootstrap = new \OperaCore\Bootstrap();
 
 list( , $class_name, $env, $app ) = $argv;
+
+if( !isset($env) ) die("\nFATAL ERROR: The second argument for post_update.sh should be the environment (f.i. \"dev\")\n");
+if( !isset($app) ) die("\nFATAL ERROR: The second argument for post_update.sh should be the app (f.i. \"DemoApp\")\n");
 
 if ( strpos( $class_name, '\\' ) === false ) $class_name = "\\$app\\Cli\\$class_name";
 
